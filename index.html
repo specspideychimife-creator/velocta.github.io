@@ -1,0 +1,1000 @@
+Yelumchi Professional Website — "index.html"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yelumchi | Digital Solutions</title>
+
+<meta name="description"
+content="Yelumchi — App development, website building, source code and digital solutions.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#05070d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(5,7,13,.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:-1px;
+    color:#55aaff;
+}
+
+.logo span{
+    color:#fff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#b9c3d4;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#55aaff;
+}
+
+.menu{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:75px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#006eff;
+    filter:blur(180px);
+    opacity:.2;
+    top:-100px;
+    left:-100px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#7b2cff;
+    filter:blur(170px);
+    opacity:.15;
+    right:-100px;
+    bottom:-100px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:780px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 16px;
+    border:1px solid rgba(85,170,255,.4);
+    border-radius:30px;
+    background:rgba(85,170,255,.08);
+    color:#72b8ff;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,82px);
+    line-height:1;
+    letter-spacing:-4px;
+    margin-bottom:25px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#55aaff,#a86cff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#aeb8c9;
+    font-size:19px;
+    max-width:650px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.3s;
+    display:inline-block;
+}
+
+.primary{
+    background:#1687ff;
+    box-shadow:0 10px 35px rgba(22,135,255,.25);
+}
+
+.secondary{
+    border:1px solid #29364a;
+    background:#101722;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-header small{
+    color:#55aaff;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-header h2{
+    font-size:42px;
+    margin-top:12px;
+}
+
+.section-header p{
+    color:#8995a8;
+    max-width:600px;
+    margin:15px auto;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0d131e,#080c14);
+    border:1px solid #1b2738;
+    border-radius:18px;
+    padding:30px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#238cff;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:#10233a;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#8e9aac;
+    line-height:1.7;
+}
+
+/* ABOUT */
+
+.about{
+    background:#080c14;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#9ba7b9;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:#101722;
+    border:1px solid #1d293a;
+    padding:25px;
+    border-radius:15px;
+}
+
+.stat h3{
+    font-size:30px;
+    color:#55aaff;
+}
+
+/* PORTFOLIO */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.project{
+    min-height:240px;
+    padding:30px;
+    border-radius:20px;
+    background:
+        linear-gradient(135deg,rgba(25,120,255,.2),rgba(100,40,200,.08)),
+        #0d131e;
+    border:1px solid #1c2a3c;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.project h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.project p{
+    color:#99a5b7;
+}
+
+/* PRICING */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    background:#0d131e;
+    border:1px solid #1c293a;
+    border-radius:20px;
+    padding:35px;
+}
+
+.price-card.featured{
+    border-color:#1687ff;
+    box-shadow:0 20px 60px rgba(22,135,255,.12);
+}
+
+.price-card h3{
+    font-size:22px;
+}
+
+.price{
+    font-size:38px;
+    font-weight:900;
+    margin:20px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    color:#9ca8b9;
+    line-height:2.2;
+    margin-bottom:25px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    background:#0d131e;
+    border:1px solid #1b2737;
+    padding:20px;
+    margin-bottom:12px;
+    border-radius:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+details p{
+    color:#929daf;
+    margin-top:15px;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    padding:70px 25px;
+    border-radius:25px;
+    background:
+        radial-gradient(circle at center,#12335a,transparent 60%),
+        #0b111b;
+    border:1px solid #1d3148;
+}
+
+.contact-box h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#9ca8b9;
+    margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #151e2b;
+    padding:35px 0;
+    color:#6f7c90;
+    text-align:center;
+}
+
+.social{
+    margin-top:12px;
+}
+
+.social a{
+    color:#55aaff;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#080c14;
+        flex-direction:column;
+        padding:25px;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .contact-box h2{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container navbar">
+
+<a href="#" class="logo">
+Yelum<span>chi</span>
+</a>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+🚀 Digital Solutions & Development
+</div>
+
+<h1>
+We Build
+<span class="gradient">Digital Ideas.</span>
+</h1>
+
+<p>
+Yelumchi helps individuals, businesses and developers
+turn ideas into powerful websites, mobile applications
+and digital products.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="https://wa.me/2348036820350"
+target="_blank">
+Start a Project →
+</a>
+
+<a class="btn secondary"
+href="#services">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-header">
+
+<small>What We Do</small>
+
+<h2>Our Services</h2>
+
+<p>
+Everything you need to take your digital idea
+from concept to reality.
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>App Development</h3>
+<p>
+Custom mobile applications built around
+your ideas and requirements.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Website Development</h3>
+<p>
+Modern, responsive websites designed
+for businesses and personal brands.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Web & App Building</h3>
+<p>
+Turn your concept into a functional
+digital product.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Source Code</h3>
+<p>
+Development resources and source code
+for supported projects.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h3>Proxy Solutions</h3>
+<p>
+Networking and proxy solutions for
+supported technical use cases.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Custom Solutions</h3>
+<p>
+Have something different in mind?
+Let's discuss your project.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<small style="color:#55aaff;">
+ABOUT YELUMCHI
+</small>
+
+<h2>
+Technology that turns ideas into reality.
+</h2>
+
+<p>
+Yelumchi is a digital development brand focused on
+building useful technology for individuals, developers
+and businesses.
+</p>
+
+<p>
+Whether you need an application, website, source code
+or another digital solution, our goal is simple:
+build something that works.
+</p>
+
+<a class="btn primary"
+href="https://wa.me/2348036820350"
+target="_blank">
+Talk to Us
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>Apps</h3>
+<p>Mobile development</p>
+</div>
+
+<div class="stat">
+<h3>Web</h3>
+<p>Modern websites</p>
+</div>
+
+<div class="stat">
+<h3>Code</h3>
+<p>Development resources</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Project communication</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-header">
+
+<small>Our Work</small>
+
+<h2>What We Build</h2>
+
+<p>
+Digital products designed around real-world needs.
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project">
+<h3>Mobile Applications</h3>
+<p>
+Android and mobile experiences built for your idea.
+</p>
+</div>
+
+<div class="project">
+<h3>Business Websites</h3>
+<p>
+Professional websites for brands and businesses.
+</p>
+</div>
+
+<div class="project">
+<h3>Digital Platforms</h3>
+<p>
+Custom web-based platforms and solutions.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-header">
+
+<small>Simple Pricing</small>
+
+<h2>Choose Your Solution</h2>
+
+<p>
+Pricing can be customized according to your project.
+</p>
+
+</div>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h3>Website</h3>
+
+<div class="price">
+Custom
+</div>
+
+<ul>
+<li>✓ Responsive design</li>
+<li>✓ Mobile friendly</li>
+<li>✓ Modern UI</li>
+<li>✓ Deployment support</li>
+</ul>
+
+<a class="btn secondary"
+href="https://wa.me/2348036820350"
+target="_blank">
+Get Quote
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>App Development</h3>
+
+<div class="price">
+Custom
+</div>
+
+<ul>
+<li>✓ Custom app</li>
+<li>✓ Modern interface</li>
+<li>✓ Project support</li>
+<li>✓ Deployment assistance</li>
+</ul>
+
+<a class="btn primary"
+href="https://wa.me/2348036820350"
+target="_blank">
+Get Quote
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Source Code</h3>
+
+<div class="price">
+Custom
+</div>
+
+<ul>
+<li>✓ Source code</li>
+<li>✓ Supported projects</li>
+<li>✓ Documentation</li>
+<li>✓ Delivery support</li>
+</ul>
+
+<a class="btn secondary"
+href="https://wa.me/2348036820350"
+target="_blank">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header">
+
+<small>FAQ</small>
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Can you build a custom app?</summary>
+<p>
+Yes. Contact us with your idea and requirements
+so we can discuss the project.
+</p>
+</details>
+
+<details>
+<summary>Can you build a business website?</summary>
+<p>
+Yes. We can create responsive websites for businesses,
+brands, services and personal projects.
+</p>
+</details>
+
+<details>
+<summary>How do I place an order?</summary>
+<p>
+Contact us through WhatsApp and provide details
+about the service you need.
+</p>
+</details>
+
+<details>
+<summary>Do you sell source code?</summary>
+<p>
+Yes, source code is available for supported projects.
+Contact us for current availability.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+Let's Build Something.
+</h2>
+
+<p>
+Have an idea, project or question?
+Talk to Yelumchi today.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a class="btn primary"
+href="https://wa.me/2348036820350"
+target="_blank">
+💬 WhatsApp Us
+</a>
+
+<a class="btn secondary"
+href="https://whatsapp.com/channel/0029VbDe4Vp9Bb5uSDNIpb0Z"
+target="_blank">
+📢 Join Our Channel
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<strong>Yelumchi</strong>
+
+<p>
+App Developer • Website Builder • Digital Solutions
+</p>
+
+<div class="social">
+<a href="https://whatsapp.com/channel/0029VbDe4Vp9Bb5uSDNIpb0Z"
+target="_blank">
+WhatsApp Channel
+</a>
+</div>
+
+<p style="margin-top:20px;">
+© 2026 Yelumchi. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+
